@@ -4,12 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
-        <title>
-            Privacy Policy - eBay Actual Sold Price Chrome Extension
-        </title>
+        <title>Privacy Policy - eBay Actual Sold Price Lookup</title>
         <meta
             name="description"
-            content="Privacy policy for the eBay Actual Sold Price Chrome extension. Learn how your data is accessed, stored, and protected."
+            content="Privacy policy for the eBay Actual Sold Price Lookup Chrome extension. Learn how data is accessed, stored, transmitted, and protected."
         />
         <link
             rel="canonical"
@@ -46,8 +44,13 @@
             .subtitle {
                 font-size: 1.25rem;
                 color: #2563eb;
-                margin-bottom: 32px;
+                margin-bottom: 12px;
                 font-weight: 500;
+            }
+            .effective-date {
+                color: #6b7280;
+                margin-bottom: 32px;
+                font-size: 0.95rem;
             }
             h2 {
                 font-size: 1.25rem;
@@ -87,90 +90,168 @@
                 color: #6b7280;
                 font-size: 0.875rem;
             }
+            @media (max-width: 600px) {
+                body {
+                    padding: 10px;
+                }
+                .container {
+                    padding: 24px;
+                }
+            }
         </style>
     </head>
     <body>
-        <div class="container">
+        <main class="container">
             <h1>Privacy Policy</h1>
-            <p class="subtitle">Chrome Extension: eBay Actual Sold Price</p>
+            <p class="subtitle">
+                Chrome Extension: eBay Actual Sold Price Lookup
+            </p>
+            <p class="effective-date">Last updated: September 1, 2026</p>
 
-            <h2>What it does</h2>
+            <h2>What the extension does</h2>
             <p>
-                This Chrome extension adds a right-click menu option on eBay
-                listing links to open eBay's Terapeak Product Research page with
-                the listing title pre-filled.
-            </p>
-
-            <h2>Data the extension accesses</h2>
-            <p>
-                <strong>Website content (limited):</strong> When you right-click
-                an eBay listing link, the extension reads the visible text of
-                that link (typically the listing title) to create the Terapeak
-                search query.
-            </p>
-            <p>
-                The extension does not read page content unless you trigger it
-                via the context menu.
-            </p>
-            <p>
-                The extension does not collect browsing history, keystrokes, or
-                analytics data, and it does not access page content beyond what
-                is needed to read the clicked link text.
+                The extension enhances eBay sold-results pages by identifying
+                eligible sold listings, checking eBay Product Research for the
+                actual sold amount, and displaying the result on the eBay page.
+                It also provides a user-initiated right-click option that opens
+                eBay Product Research with a listing title pre-filled.
             </p>
 
-            <h2>License activation data</h2>
+            <h2>eBay data the extension accesses</h2>
+            <p>
+                On supported eBay sold-results pages, the extension may process
+                information already displayed by eBay, including listing titles,
+                eBay item identifiers, displayed prices, sale or offer labels,
+                and item-location text. This information is used only to perform
+                the requested lookup and display the lookup result.
+            </p>
+            <p>
+                When you use the right-click research option, the extension reads
+                the visible text and destination of the selected eBay listing
+                link to create the research query.
+            </p>
+            <p>
+                Lookup requests are sent to eBay services from the eBay page. The
+                eBay listing information used for lookups is not sent to the
+                extension's licensing server.
+            </p>
+
+            <h2>License and installation data</h2>
+            <p>
+                The extension processes the following information to activate
+                and periodically verify access:
+            </p>
             <ul>
                 <li>
-                    <strong>License key:</strong> You may enter a license key to
-                    activate the extension.
+                    <strong>License key:</strong> The license key entered during
+                    activation.
                 </li>
                 <li>
-                    <strong>Device/instance identifier:</strong> The extension
-                    generates a random identifier on your device to represent
-                    that installation for licensing purposes.
+                    <strong>Random installation identifier:</strong> A randomly
+                    generated identifier that represents one Chrome installation.
+                    It is not derived from hardware, a MAC address, advertising
+                    identifiers, or a browser fingerprint.
+                </li>
+                <li>
+                    <strong>License records:</strong> The customer email associated
+                    with an issued license, license status, installation limit,
+                    optional expiration date, last four license-key characters,
+                    and activation or verification timestamps.
                 </li>
             </ul>
 
             <h2>How data is stored</h2>
             <p>
-                License information is stored locally in your browser's
-                extension storage (Chrome storage).
+                The license key, random installation identifier, license status,
+                and recent verification information are stored locally using
+                Chrome's extension storage. This allows the extension to remember
+                its activation and avoid contacting the licensing server for every
+                eBay lookup.
             </p>
             <p>
-                We do not store your license key or device identifier in any
-                website account database unless explicitly stated elsewhere in
-                this policy.
+                The complete license key and installation identifier are sent over
+                HTTPS to the licensing API when activation or revalidation is
+                required. The licensing database does not retain either value in
+                its complete form. It stores one-way SHA-256 hashes used for
+                verification, along with the license key's last four characters
+                for customer support.
             </p>
 
-            <h2>How data is shared</h2>
+            <h2>Service providers and data sharing</h2>
             <p>
-                License activation/deactivation requests are sent to Gumroad to
-                manage licensing. Gumroad may receive your license key and
-                device/instance identifier in order to process activation
-                status.
+                The licensing API and database are hosted by Supabase. Supabase
+                processes licensing requests on our behalf and may process standard
+                technical request information, such as an IP address and user-agent
+                information, under its own
+                <a href="https://supabase.com/privacy" rel="noopener noreferrer"
+                    >privacy policy</a
+                >.
             </p>
             <p>
-                We do not sell or share extension data for advertising,
-                analytics, or unrelated purposes.
+                eBay processes research requests made through its services under
+                eBay's own terms and privacy practices.
             </p>
+            <p>
+                Extension data is not sold or shared for advertising, behavioral
+                profiling, analytics, credit decisions, or unrelated purposes.
+            </p>
+
+            <h2>Data not collected</h2>
+            <p>The extension does not collect:</p>
+            <ul>
+                <li>Keystrokes or form entries unrelated to license activation</li>
+                <li>General browsing history</li>
+                <li>Precise location data</li>
+                <li>Hardware fingerprints</li>
+                <li>Advertising identifiers</li>
+                <li>Payment-card information</li>
+                <li>Analytics or advertising-tracking data</li>
+            </ul>
 
             <h2>Retention</h2>
             <p>
-                License information remains stored locally until you deactivate
-                the license or remove the extension.
+                Locally stored extension data remains in Chrome until the
+                extension is removed or its extension storage is cleared.
+            </p>
+            <p>
+                Server-side license and activation records are retained as needed
+                to operate the licensing system, enforce installation limits,
+                provide customer support, prevent abuse, and maintain transaction
+                or audit records. Deactivated installation records may be retained
+                as historical records rather than deleted.
             </p>
 
             <h2>Your choices</h2>
             <p>
-                You can deactivate the license from the extension's license
-                screen, or uninstall the extension to remove locally stored
-                data.
+                You may uninstall the extension at any time to remove its locally
+                stored data. You may also contact us to request an installation
+                reset or ask questions about a license record associated with your
+                email address. Requests to delete personal information will be
+                handled subject to applicable legal, security, and recordkeeping
+                requirements.
+            </p>
+
+            <h2>Security</h2>
+            <p>
+                Licensing requests use HTTPS. Complete license keys and random
+                installation identifiers are converted to one-way hashes before
+                being stored in the licensing database. No method of transmission
+                or storage can be guaranteed to be completely secure, but we use
+                reasonable safeguards appropriate to the limited information the
+                extension processes.
+            </p>
+
+            <h2>Changes to this policy</h2>
+            <p>
+                This policy may be updated when the extension's functionality or
+                data practices change. The date near the top of this page indicates
+                the latest revision.
             </p>
 
             <div class="contact">
                 <h2>Contact</h2>
                 <p>
-                    For privacy questions:
+                    For privacy or licensing questions:
                     <a href="mailto:hickoryhillshaven@gmail.com"
                         >hickoryhillshaven@gmail.com</a
                     >
@@ -180,6 +261,6 @@
             <div class="footer">
                 <p>&copy; 2026 eBay Actual Sold Price. All rights reserved.</p>
             </div>
-        </div>
+        </main>
     </body>
 </html>
